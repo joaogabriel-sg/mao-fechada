@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mão Fechada | Seu controle financeiro</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <img src="./img/logo.svg" alt="Logo da Mão Fechada" class="logo">
+    </header>
+
+    <main>
+      <section class="current-balance">
+        <h1 class="section-title">Saldo Atual</h1>
+        <h2 class="current-balance-value">R$ 0.00</h2>
+      </section>
+
+      <section class="income-and-expense">
+        <div class="income">
+          <h1>Receitas</h1>
+          <h2 class="income-value">R$ 0.00</h2>
+        </div>
+        <div class="divider"></div>
+        <div class="expense">
+          <h1>Despesas</h1>
+          <h2 class="expense-value">R$ 0.00</h2>
+        </div>
+      </section>
+
+      <section class="transactions">
+        <h1 class="section-title">Transações</h1>
+        <div class="line"></div>
+        <div class="transactions-results"></div>
+      </section>
+
+      <section class="add-transaction">
+        <h1 class="section-title">Adicionar Transação</h1>
+        <div class="line"></div>
+        <form>
+          <div class="form-group">
+            <label for="transaction-name">Nome</label>
+            <input type="text" name="transaction-name" id="transaction-name" placeholder="Nome da Transação">
+          </div>
+          <div class="form-group">
+            <label for="transaction-value">
+              Valor <span>(negativo - despesas, positivo - receitas)</span>
+            </label>
+            <input type="number" name="transaction-value" id="transaction-value" placeholder="Valor da Transação">
+          </div>
+          <div class="form-group">
+            <button class="btn-add-transaction">Adicionar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

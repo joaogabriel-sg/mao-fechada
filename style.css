@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: #f6f6f6;
+  background-size: 30em;
+}
+
+.container {
+  width: 100%;
+  max-width: 35rem;
+  margin: 0 auto;
+  padding: 2rem 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+main > section + section {
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.line {
+  background: #e3e3e4;
+  width: 100%;
+  height: 0.1rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.current-balance h1 {
+  text-transform: uppercase;
+}
+
+.current-balance h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #3498db;
+}
+
+.income-and-expense {
+  background: #ffffff;
+  display: flex;
+  padding: 1.6rem;
+  border-radius: 0.5rem;
+  margin: 1.6rem 0;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.divider {
+  background: #e3e3e4;
+  width: 0.1rem;
+  min-height: 5rem;
+}
+
+.income,
+.expense {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.income h1,
+.expense h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #2c3e50;
+}
+
+.income h2,
+.expense h2 {
+  margin-top: 0.4rem;
+  font-size: 1.8rem;
+}
+
+.income h2 {
+  color: #27ae60;
+}
+
+.expense h2 {
+  color: #c0392b;
+}
+
+.transaction {
+  position: relative;
+  background: #ffffff;
+  padding: 1rem 1.6rem;
+  border-right: 5px solid transparent;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.transaction + .transaction {
+  margin-top: 1rem;
+}
+
+.transaction.positive {
+  border-color: #27ae60;
+}
+
+.transaction.negative {
+  border-color: #c0392b;
+}
+
+.delete {
+  position: absolute;
+  top: 50%;
+  left: -2rem;
+  transform: translateY(-50%);
+  background: #c0392b;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
+}
+
+.transaction-name,
+.symbol,
+.value {
+  font-size: 1.4rem;
+  color: #2c3e50;
+}
+
+.transaction-name {
+  max-width: 50%;
+}
+
+.symbol {
+  margin-right: 0.3rem;
+}
+
+.transaction-value {
+  display: flex;
+  align-items: center;
+}
+
+.add-transaction form {
+  width: 100%;
+}
+
+.form-group + .form-group {
+  margin-top: 1.6rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.4rem;
+  color: #2c3e50;
+}
+
+.form-group span {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.form-group input {
+  width: 100%;
+  margin-top: 0.5rem;
+  height: 3.2rem;
+  padding: 0 1rem;
+  border: 1px solid #e3e3e4;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  color: #2c3e50;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #8e44ad;
+}
+
+.form-group button {
+  background: #8e44ad;
+  width: 100%;
+  height: 3.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.form-group button:hover {
+  background: #9b59b6;
+}
+
+.form-group button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 500px) {
+  .logo {
+    width: 100%;
+  }
+
+  .income h2,
+  .expense h2 {
+    font-size: 1.6rem;
+  }
+
+  .transaction {
+    position: relative;
+    background: #ffffff;
+    padding: 1rem 1.6rem;
+    border-right: 5px solid transparent;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.05);
+  }
+
+  .transaction-value {
+    margin: 0.5rem;
+  }
+
+  .transaction-name {
+    text-align: center;
+  }
+
+  .delete {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+    border-radius: 0rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+}
